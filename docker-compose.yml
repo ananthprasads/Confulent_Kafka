@@ -10,6 +10,9 @@ services:
       ZOOKEEPER_INIT_LIMIT: 5
       ZOOKEEPER_SYNC_LIMIT: 2
       ZOOKEEPER_SERVERS: localhost:22888:23888;localhost:32888:33888;localhost:42888:43888
+    volumes:
+      - /vol/zk-data1:/var/lib/zookeeper/data
+      - /vol/zk-txn-logs1:/var/lib/zookeeper/log
     network_mode: host
     extra_hosts:
       - "moby:127.0.0.1"
@@ -23,6 +26,9 @@ services:
       ZOOKEEPER_INIT_LIMIT: 5
       ZOOKEEPER_SYNC_LIMIT: 2
       ZOOKEEPER_SERVERS: localhost:22888:23888;localhost:32888:33888;localhost:42888:43888
+    volumes:
+      - /vol/zk-data2:/var/lib/zookeeper/data
+      - /vol/zk-txn-logs2:/var/lib/zookeeper/log
     network_mode: host
     extra_hosts:
       - "moby:127.0.0.1"
@@ -36,6 +42,9 @@ services:
       ZOOKEEPER_INIT_LIMIT: 5
       ZOOKEEPER_SYNC_LIMIT: 2
       ZOOKEEPER_SERVERS: localhost:22888:23888;localhost:32888:33888;localhost:42888:43888
+    volumes:
+      - /vol/zk-data3:/var/lib/zookeeper/data
+      - /vol/zk-txn-logs3:/var/lib/zookeeper/log
     network_mode: host
     extra_hosts:
       - "moby:127.0.0.1"
@@ -51,6 +60,8 @@ services:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: localhost:22181,localhost:32181,localhost:42181
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:19092
+    volumes:
+      - /vol/kafka-data1:/var/lib/kafka/data
     extra_hosts:
       - "moby:127.0.0.1"
 
@@ -65,6 +76,8 @@ services:
       KAFKA_BROKER_ID: 2
       KAFKA_ZOOKEEPER_CONNECT: localhost:22181,localhost:32181,localhost:42181
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:29092
+    volumes:
+      - /vol/kafka-data2:/var/lib/kafka/data
     extra_hosts:
       - "moby:127.0.0.1"
 
@@ -79,5 +92,7 @@ services:
       KAFKA_BROKER_ID: 3
       KAFKA_ZOOKEEPER_CONNECT: localhost:22181,localhost:32181,localhost:42181
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:39092
+    volumes:
+      - /vol/kafka-data3:/var/lib/kafka/data
     extra_hosts:
       - "moby:127.0.0.1"
