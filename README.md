@@ -4,13 +4,17 @@ docker-compose file for a 3 node Kafka cluster (using Confluent Kafka) with a 3 
 
 **Pre-requiste / Assumption:**
 
-1. Ubuntu 16.04 installed.
+1. Ubuntu 16.04.
 
-2. Install docker using following link
+2. Docker
+ 
+Install docker using following link
 
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
-3. Install docker compose
+3. Docker-compose
+
+Install docker compose using following steps
 
 ```
 
