@@ -65,7 +65,7 @@ git clone [https://github.com/ananthprasads/Confulent\_Kafka.git](https://github
 3. Get into cloned directory and perform docker compose up
 
 ```
-
+$ cd Confulent_Kafka
 $ sudo docker-compose up
 
 ```
