@@ -50,7 +50,7 @@ sudo chmod 777 -R /vol/\*
 
 ```
 
-1. Clone Repository
+2. Clone Repository
 
 ```
 
@@ -58,7 +58,7 @@ git clone [https://github.com/ananthprasads/Confulent\_Kafka.git](https://github
 
 ```
 
-1. Get into cloned directory and perform docker compose up
+3. Get into cloned directory and perform docker compose up
 
 ```
 
@@ -100,7 +100,7 @@ confulent\_kafka\_zookeeper-3\_1   /etc/confluent/docker/run   Up
 
 ```
 
-1. Check the ZooKeeper logs to verify that ZooKeeper is up. For example, for service zookeeper-1:
+2. Check the ZooKeeper logs to verify that ZooKeeper is up. For example, for service zookeeper-1:
 
 ```
 
@@ -108,7 +108,7 @@ $ sudo docker-compose logs zookeeper-1
 
   ```
 
-1. Install kafkacat
+3. Install kafkacat
 
 ```
 
@@ -116,7 +116,7 @@ $ sudo docker-compose logs zookeeper-1
 
 ```
 
-1. Run the following command to list all available brokers in the cluster:
+4. Run the following command to list all available brokers in the cluster:
 
 ```
 
@@ -144,7 +144,7 @@ Metadata for all topics (from broker -1: kafka-1:19092/bootstrap):
 
 ```
 
-1. Produce message to helloworld\_topic
+5. Produce message to helloworld\_topic
 
 ```
 
@@ -158,7 +158,7 @@ c
 
 ```
 
-1. Consume message from helloworld\_topic
+6. Consume message from helloworld\_topic
 
 ```
 
@@ -172,7 +172,7 @@ c
 
 ```
 
-1. Consume message from helloworld\_topic using localhost
+7. Consume message from helloworld\_topic using localhost
 
 ```
 
